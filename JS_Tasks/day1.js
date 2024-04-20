@@ -45,7 +45,7 @@ console.log(price)
 // Nested If Example 
 let price1 = 100
 let discount1 = false
-let dis_value1 = 30
+let dis_value1 = 300
 let country1 = "Jordan"
 let student1 = true
 
@@ -149,8 +149,10 @@ switch (day1) {
 let theGender = "Male"
 let theName = "Ahmad"
 let theAge = 30
-// Defult Syntax
+// Defult Syntax (good)
 theGender === "Male" ? console.log("Mr") : console.log("Mrs")
+// great 
+console.log(theGender === "Male" ? "Mr" : "Mrs")
 
 // Inside Variable
 let result = theGender === "Female" ? "Mr" : "Mrs"
