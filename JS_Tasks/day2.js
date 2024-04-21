@@ -147,5 +147,4 @@ function calcu() {
   }
   calcu();
 
-console.log("//////////////////////// Example 14 ////////////////////////")
   
