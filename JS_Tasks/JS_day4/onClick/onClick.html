@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <form action="">
+        <h1>onClick Examples</h1>
+        <!-- Example 1 : Arrow function, onLoad && onClick Example -->
+        <h2>Example 1</h2>
+      <input class="one" type="text" /> <br />
+      <input class="two" type="text" /> <br />
+      <input type="submit" value="Submit Data" />
+      <a href="https://google.com" target="_blank">Google</a><br /><br /><br />
+
+        <!-- Example 2 : Alert message (Inline Event Handlers)-->
+        <h2>Example 2</h2>
+      <button onclick="clickMe()">Click Me</button><br /><br />
+
+        <!-- Example 3 : Change the text color -->
+        <h2>Example 3</h2>
+      <h3 id="col" onclick="myFun()">Click me to change my color.</h3><br />
+      
+        <!-- Example 4 : Click to copy text from one input field to another -->
+        <h2>Example 4</h2>
+      <p>Field1: <input type="text" id="Field1" value="Hello World!" /></p>
+      <p>Field2: <input type="text" id="Field2" /></p>
+      <p>
+        Clicking "Copy" to copy the text value from
+        Field1 to Field2.
+      </p>
+      <button onclick="myFunction()">Copy</button><br /><br /><br />
+
+        <!-- Example 5 : Click any where in this window to change the background color -->
+        <h2>Example 5</h2>
+      <p>Click any where in this window to change the background color</p>
+      
+    </form>
+  </body>
+  <script src="onClick.js"></script>
+</html>

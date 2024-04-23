@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>onClick Examples</h1>
+    <!-- Example 1 : Convert from lowercase to uppercase -->
+    <h2>Example 1</h2>
+      <label for="">Enter your name:</label>
+      <input type="text" id="userName" /><br/><br/>
+
+    <!-- Example 2 : Outputs the value of the selected option (Inline Event Handlers) -->
+    <h2>Example 2</h2>
+      <p>Select a new car from the list.</p>
+      <select id="mySelect" onchange="myFun()">
+        <option value="Audi">Audi</option>
+        <option value="BMW">BMW</option>
+        <option value="Mercedes">Mercedes</option>
+        <option value="Volvo">Volvo</option>
+      </select>
+      <p id="demo"></p><br/><br/>
+
+      <!-- Example 3 : Choose one option to see the result -->
+      <h2>Example 3</h2>
+      <h3>Choose the one you like</h3>  
+        <input type="radio" id="happy" name="status">Be Happy with what you have</br>  
+        <input type="radio" id="excited" name="status">Be Excited about what you want</br>  
+        <input type="radio" id="sad" name="status">Don't be Sad </br>  
+        <input type="radio" id="angry" name="status">Anger is your biggest enemy</br>  
+        <input type="radio" id="none" name="status">That's great</br>  
+        <p id="show"></p>
+
+</body>
+<script src="onChange.js"></script>
+</html>
