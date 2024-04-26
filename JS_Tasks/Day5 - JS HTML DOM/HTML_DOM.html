@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        #container {
+          width: 400px;
+          height: 400px;
+          position: relative;
+          background: yellow;
+        }
+        #animate {
+          width: 50px;
+          height: 50px;
+          position: absolute;
+          background-color: red;
+        }
+        </style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS HTML DOM</title>
+  </head>
+  <body>
+    <!-- Main Concipt -->
+    <span class="my-span">Span 1</span>
+    <span class="my-span">Span 2</span>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <div id="my-div">Div</div>
+    <form action="">
+      <input type="text" name="one" value="Hello" />
+    </form>
+    <form action="">
+      <input type="text" name="two" value="Hello" /><br />
+      <a href="https://google.com">Google</a><br />
+      <a href="https://facebook.com">Facebook</a>
+    </form>
+    <br />
+    <br />
+    <br />
+    <!-- Examples -->
+
+    <!-- Example 1 :  -->
+    <h2>Example 1 :</h2>
+    <div class="js">JavaScript <span>div</span> &lt;span&gt;</div>
+    <br />
+    <img src="" alt="" /><br /><br />
+    <a class="link" href="#">Google</a><br />
+
+
+    <!-- Example 2 :  -->
+    <h2>Example 2 :</h2>
+    <p id="demo"></p>
+
+
+    <!-- Example 3 :  -->
+    <h2>Example 3 :</h2>
+    <form
+      name="myForm"
+      action="https://google.com"
+      onsubmit="return validateForm()"
+      target="_blank"
+    >
+      Name: <input type="text" name="fname" />
+      <input type="submit" value="Submit" />
+    </form>
+
+
+    <!-- Example 4 :  -->
+    <h2>Example 4 :</h2>
+    <p>Please input a number between 1 and 10:</p>
+    <input id="numb" />
+    <button type="button" onclick="myFun()">Submit</button>
+    <p id="demo"></p>
+
+
+    <!-- Example 5 :  -->
+    <h2>Example 5 :</h2>
+    <h1 id="id1">My Heading 1</h1>
+    <button type="button" 
+    onclick="document.getElementById('id1').style.color = 'red'">
+    Click Me!</button><br><br>
+
+    <!-- Example 6 :  -->
+    <h2>Example 6 :</h2>
+    <form action="https://google.com">
+        <input type="text" name="fname" required>
+        <input type="submit" value="Submit">
+      </form>
+      
+      <p>If you click submit, without filling out the text field,
+      your browser will display an error message.</p><br><br>
+      
+
+        <!-- Example 7 :  -->
+        <h2>Example 7 :</h2>
+      <p><button onclick="myMove()">Click Me</button>
+
+      <div id ="container">
+        <div id ="animate"></div>
+      </div>
+
+
+        <!-- Example 8 :  -->
+        <h2 onclick="changeText(this)">Click on this text!</h2><br><br>
+
+        
+        <!-- Example 9 :  -->
+        <p>Click the button to display the date.</p>
+        <button onclick="displayDate()">The time is?</button><br><br>
+        
+
+        <!-- Example 10 :  -->
+        <div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+        style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+        Mouse Over Me</div><br><br>
+
+
+        <!-- Example 11 :  -->
+        <div onmousedown="mDown(this)" onmouseup="mUp(this)"
+        style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+        Click Me</div><br><br>
+
+  </body>
+  <script src="HTML_DOM.js"></script>
+</html>
