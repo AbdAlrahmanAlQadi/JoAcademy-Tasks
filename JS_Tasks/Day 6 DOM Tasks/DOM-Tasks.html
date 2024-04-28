@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Tasks</title>
+    <style>
+        .text-editor {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    #text-box {
+        width: 500px;
+        height: 150px;
+        border: 1px solid black;
+        padding: 5px;
+        overflow-y: auto;
+    }
+    .article {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: white;
+    width: 310px;
+
+  }
+
+  .article h2 {
+    background-color: #ccc;
+    padding: 5px;
+    margin-top: 0;
+    height: 30px;
+    width: 300px;
+    text-align: center;
+  }
+
+  .article-body {
+    display: none; 
+    background-color: white;
+  }
+  .article p {
+    height: 300px;
+    width: 300px;
+  }
+  .article div {
+    height: 300px;
+    width: 300px;
+  }
+
+  #playlist {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+  }
+  .song {
+    position: relative;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+  }
+  .delete {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: red;
+  }
+  
+
+  #colors {
+    display: flex;
+    flex-wrap: wrap;
+    width : 300px;
+    
+}
+
+.color-tile {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  #selected {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+}
+  
+    </style>
+</head>
+<body>
+    <!-- Q1) Change The Text On Mouse Over -->
+    <h2>Q1) Change The Text On Mouse Over</h2>
+    <div onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" 
+        style="background-color: yellow; width: 175px; height: 25px;
+        padding: 20px; text-align: center; border: 1px solid;
+        font-weight: bold; font-size: x-large;">Hello world!</div>
+        <br><br>
+
+
+    <!-- Q2) Change The Color On click  -->
+    <h2>Q2) Change The Color On click (A + B)</h2>
+    <div id="changeColor" style="background-color: blue;
+     width: 200px; height: 200px;"></div>
+    <br><br>
+
+
+    <!-- Q3) Changes The Selection In The List, Display The Selected Image  -->
+    <h2>Q3) Changes The Selection In The List, Display The Selected Image</h2>
+    <select name="" id="selImg">
+        <option value="" Selected>Select</option>
+        <option value="Jordan.jpg">Jordan</option>
+        <option value="Palestine.jpg">Palestine</option>
+    </select><br><br>
+    <div id="imgCon">
+        <img id="seldImg" src="" alt="Selected Image">
+    </div>
+        <br><br>
+
+
+    <!-- Q4) Simple what-you-see-what-you-get text editor  -->
+    <h2>Q4) Simple what-you-see-what-you-get text editor</h2>
+        <div class="text-editor">
+            <input type="checkbox" id="bold-checkbox">
+            <label for="bold-checkbox">Bold</label>
+            <input type="checkbox" id="underline-checkbox">
+            <label for="underline-checkbox">Underline</label>
+            <input type="checkbox" id="italic-checkbox">
+            <label for="italic-checkbox">Italic</label>
+        </div>
+        <div class="text-editor">
+            <select id="font-size-select">
+                <option value="15px">15</option>
+                <option value="25px">25</option>
+                <option value="35px">35</option>
+                <option value="45px">45</option>
+            </select>
+            <select id="font-family-select">
+                <option value="Arial">Arial</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Courier New">Courier New</option>
+            </select>
+        </div>
+        <div class="text-editor">
+            <div id="text-box" contenteditable="true" >What-You-See-What-You-Get.</div>
+        </div>
+        <br><br>
+
+
+        <!-- Q5) Password Form -->
+        <h2>Q5) Password Form</h2>
+        <form id="passwordForm">
+            <label for="password1">Password:</label><br>
+            <input type="password" id="password1" name="password1" required><br>
+            <div class="err" id="password1Err" style="color: red;"></div><br>
+        
+            <label for="password2">Confirm Password:</label><br>
+            <input type="password" id="password2" name="password2" required><br>
+            <div class="err" id="password2Err" style="color: red;"></div><br>
+        
+            <button type="submit" id="submitButton" style="display: none;">Submit</button>
+        </form>
+        <br><br>
+
+
+        <!-- Q6) Content show/hide -->
+        <h2>Q6) Content show/hide</h2>
+        <div class="article">
+            <h2>What is lorem ipsum?</h2>
+            <div class="article-body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Maiores facilis mollitia cum accusantium error nisi natus, 
+                explicabo id nam! Tenetur sed perferendis reiciendis! 
+                Beatae exercitationem perferendis quidem officia nam nobis.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Maiores facilis mollitia cum accusantium error nisi natus, 
+                explicabo id nam! Tenetur sed perferendis reiciendis! 
+                Beatae exercitationem perferendis quidem officia nam nobis.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Maiores facilis mollitia cum accusantium error nisi natus, 
+                explicabo id nam! Tenetur sed perferendis reiciendis! 
+                Beatae exercitationem perferendis quidem officia nam nobis.
+              </p>
+            </div>
+            <a href="#" class="show-link" onclick="toggleArticle(event)">Show</a>
+            <a href="#" class="hide-link" onclick="toggleArticle(event)" style="display: none;">Hide</a>
+          </div>
+          
+          <div class="article">
+            <h2>Why we do use it?</h2>
+            <div class="article-body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Maiores facilis mollitia cum accusantium error nisi natus, 
+                explicabo id nam! Tenetur sed perferendis reiciendis! 
+                Beatae exercitationem perferendis quidem officia nam nobis.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Maiores facilis mollitia cum accusantium error nisi natus, 
+                explicabo id nam! Tenetur sed perferendis reiciendis! 
+                Beatae exercitationem perferendis quidem officia nam nobis.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Maiores facilis mollitia cum accusantium error nisi natus, 
+                explicabo id nam! Tenetur sed perferendis reiciendis! 
+                Beatae exercitationem perferendis quidem officia nam nobis.
+            </p>
+            </div>
+            <a href="#" class="show-link" onclick="toggleArticle(event)">Show</a>
+            <a href="#" class="hide-link" onclick="toggleArticle(event)" style="display: none;">Hide</a>
+          </div>
+          
+          <div class="article">
+            <h2>Where dose it come from?</h2>
+            <div class="article-body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Maiores facilis mollitia cum accusantium error nisi natus, 
+                explicabo id nam! Tenetur sed perferendis reiciendis! 
+                Beatae exercitationem perferendis quidem officia nam nobis.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Maiores facilis mollitia cum accusantium error nisi natus, 
+                explicabo id nam! Tenetur sed perferendis reiciendis! 
+                Beatae exercitationem perferendis quidem officia nam nobis.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Maiores facilis mollitia cum accusantium error nisi natus, 
+                explicabo id nam! Tenetur sed perferendis reiciendis! 
+                Beatae exercitationem perferendis quidem officia nam nobis.
+              </p>
+            </div>
+            <a href="#" class="show-link" onclick="toggleArticle(event)">Show</a>
+            <a href="#" class="hide-link" onclick="toggleArticle(event)" style="display: none;">Hide</a>
+          </div>
+          <br><br>
+
+        <!-- Q7)A) Simple Playlist  -->
+        <h2>Q7) Simple Playlist (A + B)</h2>
+          <input type="text" id="songInput" placeholder="Enter a song">
+          <button id="addButton">Add Song</button>
+          <div id="playlist"></div>
+          <p id="errorMessage" style="color: red; display: none;"></p>
+            <br><br>
+            <br><br>
+
+
+        <!-- Q8) Color Picker  -->
+        <h2>Q8) Color Picker</h2>
+          <div id="colors"></div>
+          <div id="selected"></div>
+            
+            
+</body>
+<script src="DOM-Tasks.js"></script>
+</html>
